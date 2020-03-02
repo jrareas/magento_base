@@ -13,8 +13,6 @@ help:	 ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fg
 
 build:   ## build the image
-	#unzip -o -P $(ZIP_SECRET) variables.zip
-	#include variables.sh
 	docker build \
 		--build-arg MAGENTO_PUB_KEY=$(MAGENTO_PUB_KEY) \
 		--build-arg MAGENTO_PRIV_KEY=$(MAGENTO_PRIV_KEY) \

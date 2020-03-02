@@ -68,3 +68,4 @@ atlassian*
 !/generated/.htaccess
 .DS_Store
 variables.sh
+auth.json
