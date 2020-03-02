@@ -8,8 +8,6 @@ IMAGE_NAME=$(GCP_REGISTRY)/magento_base_magento_base
 
 variables.sh: ##
 	unzip -o -P $(ZIP_SECRET) variables.zip
-	variables.sh
-
 
 help:	 ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fg
