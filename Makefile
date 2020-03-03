@@ -1,8 +1,8 @@
 # Defaults settings (when building locally)
 SHELL := /bin/sh
 
-GCP_REGISTRY=us.gcr.io/minhamaedizia
-IMAGE_NAME=$(GCP_REGISTRY)/magento_base_magento_base
+DOCKER_REGISTRY=jrareas
+IMAGE_NAME=$(DOCKER_REGISTRY)/magento_base
 
 -include variables.sh
 
