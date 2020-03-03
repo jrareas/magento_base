@@ -1,4 +1,4 @@
-FROM php:7.2-apache
+FROM jrareas/php-7.2-apache-composer
 COPY . /app
 WORKDIR  /app
 
@@ -22,10 +22,6 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install sockets \
     && docker-php-ext-install zip \
     && docker-php-ext-install pdo_mysql
-
-
-# Install Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN composer global config http-basic.repo.magento.com ${MAGENTO_PUB_KEY} ${MAGENTO_PRIV_KEY}
 
